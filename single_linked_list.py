@@ -112,7 +112,7 @@ class SingleLinkedList:
             # 找到index位置的结点
             node = self.headnode
             '''
-            index>0,index-=1, 当index取到0时，node正好位于index结点位置处；
+            index>0, index-=1, 当index取到0时，node正好位于index结点位置处；
             当index取到1时，node位于index的上一个结点处
             此处使用取到1，因为要知道index结点的上一个节点
             '''
