@@ -1,1 +1,3 @@
-# data-structure
+# 数据结构与算法
+学习数据结构及算法
+使用python语言实现
