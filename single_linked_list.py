@@ -54,17 +54,19 @@ class SingleLinkedList:
 
     # 打印链表
     def prlist(self):
-        if self.isempty():
-            print('空列表')
-        else:
-            temp = self.headnode
-            while temp is not None:
-                print(temp.value)
-                temp = temp.next
-                # 防止有重复添加的结点，形成循环链表，造成无限循环
-                if temp == self.headnode:
-                    print(temp.value)
-                    break
+         if self.isempty():
+             print('空列表')
+         else:
+             temp = self.headnode
+             res = ''
+             while temp is not None:
+                 res += str(temp.getvalue()) + ' -> ' if temp.next else str(temp.getvalue())
+                 temp = temp.next
+             print(res)
+             # # 防止有重复添加的结点，形成循环链表，造成无限循环
+             # if temp == self.headnode:
+             #     print(temp.value)
+             #     break
 
     # 插入结点
     def insertnode(self, node: Nodes, index: int):
