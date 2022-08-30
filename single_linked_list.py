@@ -17,17 +17,21 @@ class SingleLinkedList:
         self.headnode = None
 
     # 获取链表长度
-    def getlength(self):
+        def getlength(self):
         length = 0
-        if self.headnode is None:
-            return 0
+        # if self.headnode is None:
+        #     return 0
+        # node = self.headnode
+        # while node is not None:
+        #     length += 1
+        #     # 指向下一个结点
+        #     node = node.next
+        #     if node == self.headnode:
+        #         break
         node = self.headnode
         while node is not None:
-            length += 1
-            # 指向下一个结点
             node = node.next
-            if node == self.headnode:
-                break
+            length += 1
         return length
 
     # 判断链表是否为空
@@ -86,13 +90,13 @@ class SingleLinkedList:
                 print('index error')
 
     # 输出链表中index位置的结点
-    def getnode(self, index: int) -> Nodes:
-        if index >= self.getlength():
+    def getnode(self, index: int):
+        if index < 0 or index >= self.getlength():
             print('index out of range')
             return
         # 获取头结点
-        elif index == 0:
-            node = self.headnode
+        # elif index == 0:
+        #     node = self.headnode
         else:
             node = self.headnode
             while index > 0:
